@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+
+void countVowelsConsonants(const std::string& str) {
+    int vowelCount = 0;
+    int consonantCount = 0;
+    const std::string vowels = "aeiou";
+
+    for (char ch : str) {
+        if (vowels.find(ch) != std::string::npos) {
+            ++vowelCount;
+        } else if (ch >= 'a' && ch <= 'z') { // Check if it's a lowercase letter
+            ++consonantCount;
+        }
+    }
+
+    std::cout << "Number of vowels: " << vowelCount << std::endl;
+    std::cout << "Number of consonants: " << consonantCount << std::endl;
+}
+
+int main() {
+    std::string input;
+    std::cout << "Enter a string: ";
+    std::cin >> input;
+    
+    countVowelsConsonants(input);
+    
+    return 0;
+}
