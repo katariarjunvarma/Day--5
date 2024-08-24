@@ -1,0 +1,19 @@
+#include <iostream>
+
+void checkOddEven(int number) {
+    if (number % 2 == 0) {
+        std::cout << "Even" << std::endl;
+    } else {
+        std::cout << "Odd" << std::endl;
+    }
+}
+
+int main() {
+    int number;
+    std::cout << "Enter a number: ";
+    std::cin >> number;
+    
+    checkOddEven(number);
+    
+    return 0;
+}
